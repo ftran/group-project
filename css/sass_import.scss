@@ -1,0 +1,25 @@
+//import css reset 
+//note: NOT using url() for import of .scss
+@import "normalize.scss";
+
+//import favourite mixins 
+@import "sass_import_mixins.scss";
+
+//import variable values
+@import "sass_import_variables.scss";
+
+//use use mixins, variables, etc...
+.bluebox {
+  @include box;
+  @include linear-gradient($primary_color, $secondary_color);
+}
+.pinkbox{  
+  @include box;
+  @include linear-gradient($alt_color, white);    
+}
+//Use @extend to extend rules from one style declaration to another
+.wide-box {
+    @extend .bluebox;
+    width: 500px;
+    margin: 0px 5px;
+}
